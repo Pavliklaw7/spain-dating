@@ -1,9 +1,11 @@
 @import './base.css';
+@import "compass/css3";
+@import "compass/css3/animation";
 
 #app {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0.5rem;
   font-weight: normal;
 }
 
@@ -15,6 +17,25 @@ a,
   padding: 3px;
 }
 
+.container {
+  height: 100%;
+  /* margin: 0 auto; */
+}
+
+
+
+$bubbles_total: 30;
+$anim_time: 0.01;
+
+* {
+    @include box-sizing(border-box);
+    &:after,
+    &:before {
+        @include box-sizing(border-box);
+    }
+}
+
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
@@ -25,11 +46,5 @@ a,
   body {
     display: flex;
     place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 }
