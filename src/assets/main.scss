@@ -1,6 +1,4 @@
 @import './base.css';
-@import "compass/css3";
-@import "compass/css3/animation";
 
 #app {
   width: 100%;
@@ -20,19 +18,6 @@ a,
 .container {
   height: 100%;
   /* margin: 0 auto; */
-}
-
-
-
-$bubbles_total: 30;
-$anim_time: 0.01;
-
-* {
-    @include box-sizing(border-box);
-    &:after,
-    &:before {
-        @include box-sizing(border-box);
-    }
 }
 
 
